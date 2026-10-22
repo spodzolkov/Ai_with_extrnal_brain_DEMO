@@ -1,0 +1,11 @@
+# Внутрішні робочі файли узгодження та уточнення вимог (поза контролем Git)
+clarifications/
+requirements_review/
+temp/
+*.local.md
+
+# Системні файли та логи
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
