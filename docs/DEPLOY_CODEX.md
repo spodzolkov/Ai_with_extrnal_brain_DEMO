@@ -41,7 +41,57 @@ GitHub Copilot та моделі сімейства Codex автоматично
 
 ---
 
-## 🚀 3. Приклади Промптів для GitHub Copilot / Codex
+## 🖥️ 3. Налаштування через Графічний Інтерфейс (GUI) Десктопного Клієнта ChatGPT
+
+Офіційний десктопний додаток **ChatGPT для Windows та macOS** підтримує інтеграцію з локальними файлами та середовищем розробки через власний графічний інтерфейс.
+
+### Крок 1. Налаштування «Work with Apps» у ChatGPT Desktop
+1. Завантажте та встановіть додаток [ChatGPT Desktop](https://openai.com/chatgpt/desktop/).
+2. Відкрийте графічні налаштування:
+   - Натисніть на аватар свого профілю (у лівому або правому нижньому куті) -> оберіть **Settings**.
+3. Перейдіть до розділу **Work with Apps**:
+   - Увімкніть доступ для **Visual Studio Code** та **Terminal**.
+   - Це дозволяє викликати вікно швидкого чату комбінацією `Alt + Space` (Windows) або `Option + Space` (macOS) безпосередньо поруч із відкритим проєктом: ChatGPT автоматично зчитуватиме виділені фрагменти ТЗ або коду.
+
+### Крок 2. Створення кастомного помічника (Custom GPT) через GUI
+1. У лівому бічному меню клієнта натисніть **Explore GPTs** -> кнопка **+ Create** (Створити GPT).
+2. У верхній частині перейдіть із вкладки *Create* на вкладку **Configure**:
+   - **Name**: `Knowledge Base & Requirements Manager`
+   - **Description**: `AI-асистент для нормалізації, аналізу та ведення бази знань у Notion`
+   - **Instructions**: вставте повний текст із файлу [`.github/copilot-instructions.md`](file:///.github/copilot-instructions.md).
+3. **Завантаження знань (Knowledge Base в GUI):**
+   - У блоці **Knowledge** натисніть графічну кнопку **Upload files**.
+   - Виділіть та завантажте файли інструкцій з папки [`.agents/skills/`](file:///.agents/skills/):
+     * `requirements-normalizer/SKILL.md`
+     * `requirements-analyzer/SKILL.md`
+     * `requirements-resolver/SKILL.md`
+     * `requirements-decision-applier/SKILL.md`
+     * `openapi-spec-generator/SKILL.md`
+4. **Підключення Notion API (Actions):**
+   - У блоці **Actions** натисніть кнопку **Create new action**.
+   - Вкажіть OpenAPI схему для Notion API або імпортуйте ендпоінти для додавання сторінок у базу даних.
+   - У полі авторизації оберіть `API Key` -> тип `Bearer` -> введіть ваш токен `ntn_...`.
+5. Натисніть **Create / Update** у правому верхньому куті. Тепер ваш Custom GPT доступний у десктопному додатку!
+
+---
+
+## 💻 4. Налаштування Графічного Інтерфейсу в GitHub Copilot Desktop (VS Code GUI)
+
+Для користувачів, які працюють через візуальний інтерфейс розширення GitHub Copilot у VS Code:
+
+1. **Відкриття графічної панелі Copilot Chat:**
+   - На лівій панелі активностей (Activity Bar) натисніть на іконку **Copilot Chat** (іконка чату з логотипом GitHub).
+2. **Прикріплення контексту через інтерфейс (Attach Context):**
+   - Біля поля введення повідомлення натисніть на графічну кнопку зі скріпкою/плюсом (`+ Attach Context`).
+   - Оберіть пункт **Files...** та вкажіть інструкцію потрібного скіла (наприклад: `.agents/skills/requirements-normalizer/SKILL.md`).
+3. **Налаштування параметрів агента в GUI:**
+   - Відкрийте меню `File` -> `Preferences` -> `Settings` (або `Ctrl + ,`).
+   - У рядку пошуку налаштувань введіть: `github.copilot.chat`.
+   - Увімкніть параметр **Github > Copilot > Chat: Agent Mode** (активує здатність Copilot самостійно планувати кроки та викликати MCP інструменти).
+
+---
+
+## 🚀 5. Приклади Промптів для GitHub Copilot / Codex
 
 У чаті Copilot або під час кодогенерації:
 
