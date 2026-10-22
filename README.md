@@ -6,6 +6,23 @@
 
 ---
 
+## 🚀 Перший запуск: `notion-project-init`
+
+Для швидкого автоматизованого розгортання структури бази знань у чистому воркспейсі Notion або для створення нового проєкту використовуйте скіл першого запуску:
+👉 [`notion-project-init`](file:///.agents/skills/notion-project-init/SKILL.md) (також доступний глобально в Antigravity).
+
+### Що створюється автоматично:
+1. **Коренева сторінка проєкту** з повною навігаційною структурою та описом.
+2. **База даних «1. Нормалізовані вимоги»** із типізованою схемою (автоінкремент `REQ-*`, типи, початковий стан `потребує аналізу`, колонка «Ким підтверджено»).
+3. **4 підпорядковані розділи з готовими шаблонами**:
+   - `2. Проміжні результати аналізу вимог` (таблиця дефектів, питань та статусів опрацювання).
+   - `3. Зафіксовані прийняті рішення` (журнал рішень ADR).
+   - `4. Сформовані задачі` (задачі QA, тест-плани та DoD).
+   - `5. Схема АПІ` (матриця ендпоінтів та специфікації OpenAPI 3.0+).
+4. **Автоматична прив'язка**: оновлює клікабельні лінки та ID сторінок у файлах репозиторію.
+
+---
+
 ## 🔗 Швидкі посилання в Notion
 
 - 🏠 **Головна сторінка проєкту**: [База знань проєкту](https://app.notion.com/p/4018b55f9a7e809a87c5e83a8185bd10)
@@ -117,6 +134,17 @@
    - Оглядова матриця всіх ендпоінтів у таблиці (Метод, Шлях, Тег, Опис, Авторизація, Відповіді).
    - Детальний розбір DTO моделей запитів/відповідей та обов'язкових статус-кодів (2xx, 4xx, 5xx).
    - Повний машинно-читабельний блок OpenAPI (YAML/JSON) для імпорту в Postman або генератори автотестів.
+
+---
+
+## 📖 Інструкції з Розгортання в Різних AI Середовищах
+
+Цей проєкт сумісний із найпопулярнішими платформами та AI-інструментами розробки. Оберіть детальну інструкцію для вашого інструменту:
+
+- 🚀 **[Google Antigravity IDE (Antigravity 2.0)](file:///c:/Work/My_repos/Qa_auto_agen_demo/docs/DEPLOY_ANTIGRAVITY.md)** — повна підтримка системи скілів та конфігурація MCP.
+- 🤖 **[Claude Code (Anthropic CLI)](file:///c:/Work/My_repos/Qa_auto_agen_demo/docs/DEPLOY_CLAUDE_CODE.md)** — запуск через CLI, конфігурація MCP та використання [`CLAUDE.md`](file:///c:/Work/My_repos/Qa_auto_agen_demo/CLAUDE.md).
+- 💻 **[VS Code, Cursor, Windsurf, Cline / Roo Code](file:///c:/Work/My_repos/Qa_auto_agen_demo/docs/DEPLOY_VSCODE_IDE.md)** — робота в редакторах на базі VS Code та конфігурація [`.cursorrules`](file:///c:/Work/My_repos/Qa_auto_agen_demo/.cursorrules).
+- 🧠 **[OpenAI Codex, GitHub Copilot Chat, ChatGPT](file:///c:/Work/My_repos/Qa_auto_agen_demo/docs/DEPLOY_CODEX.md)** — інтеграція через [`.github/copilot-instructions.md`](file:///c:/Work/My_repos/Qa_auto_agen_demo/.github/copilot-instructions.md) та OpenAI Assistant API.
 
 ---
 
