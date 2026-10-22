@@ -3,7 +3,7 @@ clarifications/
 requirements_review/
 temp/
 *.local.md
-
+scratch/
 # Системні файли та логи
 .DS_Store
 Thumbs.db
